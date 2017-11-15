@@ -1,7 +1,7 @@
 <template>
-<div class="ui-footer ui-border-t">
+<footer class="ui-footer ui-border-t">
     <ul class="ui-tiled">
-        <li :class="home"><router-link to:{}>
+        <li :class="home"><router-link :to="{ name: 'Index' }">
             <i class="ui-icon-home"></i>
             <p>首页</p>
         </router-link>
@@ -16,18 +16,18 @@
             <p>收藏</p>
         </a>
         </li>
-        <li :class="cart"><a href="">
+        <li :class="cart"><router-link :to="{ name: '' }">
             <i class="ui-icon-cart"></i>
             <p>购物车</p>
-        </a>
+        </router-link>
         </li>
-        <li :class="personal"><a href="">
+        <li :class="personal"><router-link :to="{ name: '' }">
             <i class="ui-icon-personal"></i>
             <p>我的</p>
-        </a>
+        </router-link>
         </li>
     </ul>
-</div>
+</footer>
 </template>
 
 <script>
