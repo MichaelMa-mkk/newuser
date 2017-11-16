@@ -47,4 +47,20 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.ui-footer {
+    background-color: white
+}
+.ui-tiled li i, .ui-tiled li p {
+    cursor: pointer;
+    color: grey;
+}
+.ui-tiled li p {
+    font-size: 80%;
+}
+.ui-tiled li i {
+    margin-bottom: -10px;
+}
+.on p, .on i {
+    color: #00a5e0 !important;
+}
 </style>

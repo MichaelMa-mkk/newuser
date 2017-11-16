@@ -1,22 +1,22 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import FruitSingle from '@/components/Good/FruitSingle'
+
+import FruitList from './Good/FruitList'
+import FruitDetail from './Good/FruitDetail'
 
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history', // 可以去掉url中的"#/"
   routes: [
     {
       path: '/',
       name: 'Index',
-      component: FruitSingle
-    },
-    {
-      path: '/good',
-      name: 'GoodList',
       redirect: {
-        name: 'Index'
+        name: 'FruitSingle'
       }
-    }
+    },
+    FruitList,
+    FruitDetail
   ]
 })

@@ -1,21 +1,21 @@
 <template>
 <div class="before-login">
-    <a href="{% url 'top_single' %}">
+    <router-link :to="{ name: 'FruitSingle'}">
         <i class="ui-icon-emo"></i>
         <p>普通水果</p>
-    </a>
-    <a href="{% url 'top_combo' %}">
+    </router-link>
+    <router-link :to="{ name: 'FruitCombo'}">
         <i class="ui-icon-wallet"></i>
         <p>水果套餐</p>
-    </a>
-    <a href="{% url 'people:register' %}">
+    </router-link>
+    <router-link :to="{ }">
         <i class="ui-icon-add-people"></i>
         <p>注册</p>
-    </a>
-    <a href="{% url 'people:login' %}">
+    </router-link>
+    <router-link :to="{ }">
         <i class="ui-icon-pc"></i>
         <p>登录</p>
-    </a>
+    </router-link>
 </div>
 </template>
 
@@ -27,4 +27,18 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.before-login {
+    margin-left:4%;
+    margin-top: 3%;
+    margin-right:0%;
+}
+.before-login a {
+    display: inline-block;
+    width: 23%;
+    text-align: center;
+}
+.before-login a i {
+    color: #00a5e0;
+    font-size: 300%;
+}
 </style>

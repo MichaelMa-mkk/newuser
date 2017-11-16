@@ -123,6 +123,7 @@ export default {
   components: {
     /*some imported components to register*/
   }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -132,5 +133,5 @@ export default {
 ```
 
 ```html
-    <router-link :to="{ name: 'Index' }"></router-link> <!-- the name in router-->
+<router-link :to="{ name: 'Index' }"></router-link> <!-- the name in router-->
 ```
