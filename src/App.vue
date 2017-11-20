@@ -11,12 +11,13 @@ export default {
 </script>
 
 <style>
-@import "assets/ffa.css";
+html {
+  background-color: white;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   background-color: white;
 }
 </style>

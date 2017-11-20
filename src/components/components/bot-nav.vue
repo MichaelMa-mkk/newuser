@@ -6,17 +6,17 @@
             <p>首页</p>
         </router-link>
         </li>
-        <li :class="news"><a onclick="show_dialog()">
+        <li :class="news"><a @click="show_dialog">
             <i class="ui-icon-news"></i>
             <p>消息</p>
         </a>
         </li>
-        <li :class="trend"><a onclick="show_dialog()">
+        <li :class="trend"><a @click="show_dialog">
             <i class="ui-icon-trend" style="font-size: 300%"></i>
             <p>收藏</p>
         </a>
         </li>
-        <li :class="cart"><router-link :to="{ name: '' }">
+        <li :class="cart"><router-link :to="{ name: 'Cart' }">
             <i class="ui-icon-cart"></i>
             <p>购物车</p>
         </router-link>
@@ -33,13 +33,19 @@
 <script>
 export default {
   name: 'bot-nav',
-  data () {
-    return {
-      home: 'on',
-      news: '',
-      trend: '',
-      cart: '',
-      personal: ''
+  props: [
+    'home',
+    'news',
+    'trend',
+    'cart',
+    'personal'
+  ],
+  methods: {
+    show_dialog () {
+      var att = document.createAttribute('class')
+      var dialogElement = document.getElementById('not_develop')
+      att.value = dialogElement.className + ' show'
+      dialogElement.setAttributeNode(att)
     }
   }
 }

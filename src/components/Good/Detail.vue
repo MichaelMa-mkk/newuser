@@ -1,29 +1,21 @@
 <template>
 <section>
   <head-bar head_text="水果详情"></head-bar>
-  <div class="ui-poptips ui-poptips-success" style="visibility:hidden">
-      <div class="ui-poptips-cnt"><i></i></div>
-  </div>
 
   <div class="box">
       <p>{{ fruit.name }}</p>
-      
-      <a style="color:gray">{{ fruit.advertising }}</a>
-      <h1 style="color:orange">￥{{ fruit.price_sell }}</h1>
+      <a>{{ fruit.advertising }}</a>
+      <h1>￥{{ fruit.price_sell }}</h1>
   </div>
 
-  <div class="ui-row-flex" style="overflow:hidden">
-      <div class="ui-col"><img src="" class="img-responsive">
-      </div>
-  </div>
-  <footer class="ui-footer ui-header-stable" style="height: 44px;padding-right: 0px;padding-left: 0px;">
-      <div class="ui-row-flex ui-whitespace" style="padding-right: 0px; padding-left: 0px;">
+  <footer class="ui-footer ui-header-stable">
+      <div class="ui-row-flex ui-whitespace">
           <div class="ui-col ui-flex ui-flex-pack-center">
-              <a href="">
+              <router-link :to="{ name: 'Cart' }">
                   <i class="ui-icon-cart"></i>
-              </a>
+              </router-link>
           </div>
-          <div id="a" class="ui-col ui-col-4 ui-flex ui-flex-align-center ui-flex-pack-center" style = "background-color:#FFC125; color: #FFF;">
+          <div class="ui-col ui-col-4 ui-flex ui-flex-align-center ui-flex-pack-center" style = "">
               <p>加入购物车</p>
           </div>
       </div>
@@ -42,7 +34,7 @@ export default {
     return {
       fruit: {
         name: '苹果',
-        advertise: '广告词',
+        advertising: '广告词',
         price_sell: 6.66
       }
     }
@@ -52,6 +44,20 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+.ui-footer{
+    height: 44px;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.ui-whitespace{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.ui-flex-align-center{
+    background-color:#FFC125;
+    color: white;
+    padding-bottom: 7px;
+}
 section{
   margin-top: 55px;
 }
@@ -63,7 +69,7 @@ section{
 }
 .box{
     margin: 20px auto;
-    width: 300px;
+    width: 90%;
     min-height: 100px;
     padding: 10px;
     position:relative;
@@ -100,6 +106,12 @@ section{
     -webkit-box-shadow: 0px 0px 8px rgba(0,0,0, 0.1);
     -webkit-transform: skew(2deg,2deg)
                         translate(-1px,2px)
+}
+.box a{
+    color: gray;
+}
+.box h1{
+    color: orange;
 }
 p{ 
     margin-top: 10px;

@@ -3,6 +3,7 @@ import Router from 'vue-router'
 
 import FruitList from './Good/FruitList'
 import FruitDetail from './Good/FruitDetail'
+import Order from './Order'
 
 Vue.use(Router)
 
@@ -17,6 +18,7 @@ export default new Router({
       }
     },
     FruitList,
-    FruitDetail
+    FruitDetail,
+    Order
   ]
 })

@@ -1,9 +1,9 @@
 <template>
 <section class="ui-container">
-    <top-nav></top-nav>
-    <router-view></router-view>
-    <not-develop></not-develop>
-    <bot-nav></bot-nav>
+  <top-nav></top-nav>
+  <router-view></router-view>
+  <not-develop></not-develop>
+  <bot-nav home="on"></bot-nav>
 </section>
 </template>
 
